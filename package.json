@@ -1,16 +1,24 @@
 {
-  "name": "flash-comments",
-  "version": "0.0.2",
-  "description": "Flash Comments - An Open Source Vanilla JS commenting library client side & server side components",
+  "name": "spark-comment",
+  "version": "1.0.0",
+  "description": "A application for comments",
   "main": "server.js",
   "scripts": {
-    "postinstall": "npm run build",
-    "connection": "nodemon server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamolami/flash-comments.git"
   },
   "author": "Integer",
-  "license": "ISC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iamolami/flash-comments/issues"
+  },
+  "homepage": "https://github.com/iamolami/flash-comments#readme",
   "dependencies": {
-    "body-parser": "^1.16.1",
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "nodemon": "^2.0.13",
     "path": "^0.12.7",
