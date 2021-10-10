@@ -4,6 +4,7 @@
   "description": "Flash Comments - An Open Source Vanilla JS commenting library client side & server side components",
   "main": "server.js",
   "scripts": {
+    "postinstall": "npm run build",
     "connection": "nodemon server.js"
   },
   "author": "Integer",
