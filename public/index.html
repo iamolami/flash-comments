@@ -55,16 +55,18 @@
                 <div class="comment-form">
                     <div class="left-side">
                         <div class="row">
-                            <input type="text" required placeholder="enter your name" id="new_comment_name">
-                            <input placeholder="enter valid email" required type="email" id="new_comment_email">
+                            <input type="text" required placeholder="enter your name" id="new_comment_name"
+                                onkeyup="saveValue(this)">
+                            <input placeholder="enter valid email" required type="email" id="new_comment_email"
+                                onkeyup="saveValue(this)">
                         </div>
                         <div class="row">
-                            <textarea type="text" placeholder="enter comment text" required id="new_comment_text"
-                                rows="10" cols="30"></textarea>
+                            <textarea type="text" placeholder="What do you think?....." required id="new_comment_text"
+                                rows="10" cols="30" onkeyup="saveValue(this)"></textarea>
                         </div>
                     </div>
                     <div class="right-side">
-                        <button type="submit" class="button-secondary pure-button">Send Comment</button>
+                        <button type="submit" class="button-secondary pure-button">Comment</button>
                     </div>
                 </div>
             </form>
