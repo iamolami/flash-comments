@@ -8,7 +8,7 @@
   overflow-y: hidden;
 
   @include for_breakpoint(xl-resolution sm-resolution md-resolution) {
-    min-height: 95vh;
+    min-height: 100vh;
   }
 
   &__container {
@@ -38,9 +38,9 @@
     //background-color: red;
 
     @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
-      margin-left: -2rem;
+      margin-left: -1rem;
       height: 16vh;
-      width: 80%;
+      width: 100%;
     }
   }
 
