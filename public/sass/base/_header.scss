@@ -8,7 +8,7 @@
   overflow-y: hidden;
 
   @include for_breakpoint(xl-resolution sm-resolution md-resolution) {
-    min-height: 90vh;
+    min-height: 95vh;
   }
 
   &__container {
