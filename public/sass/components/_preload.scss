@@ -1,0 +1,63 @@
+.container {
+  text-transform: uppercase;
+  padding-top: 200px;
+  position: fixed;
+  width: 100%;
+  bottom: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 7000;
+
+  &__text {
+    font-size: 4rem;
+    font-family: $heading-family;
+    margin-right: 1.2rem;
+    color: $heading-color;
+    font-weight: $font-bold;
+
+    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+      display: none;
+    }
+  }
+
+  &__primary {
+    color: $dark-blue;
+  }
+
+  &__flip {
+    height: 50px;
+    overflow: hidden;
+  }
+}
+
+.container__flip > div > div {
+  font-size: 2.25rem;
+  color: $text-color;
+  padding: 0.25rem 0.75rem;
+  height: 45px;
+  margin-bottom: 45px;
+  display: inline-block;
+  font-weight: $font-light;
+
+  @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+.container__flip div:first-child {
+  animation: show 7s linear infinite;
+}
+
+.container__flip div:first-child div {
+  margin-left: 0.3125rem;
+}
+
+.overlayer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5000;
+  background-color: $color-white;
+}

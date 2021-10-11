@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ================ Custom CSS Link ================= -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Timo Akano - Personal Website</title>
+</head>
+
+<body>
+    <!-- ===================== Preload ================= -->
+    <div class="overlayer"></div>
+    </div>
+    <div class="container">
+        <div class="container__text">
+            <span class="container__primary">Tim</span>
+            Akano
+        </div>
+        <div class="container__flip">
+            <div>
+                <div>Author</div>
+            </div>
+            <div>
+                <div>Enterpreneur</div>
+            </div>
+            <div>
+                <div>Mentor / Coach</div>
+            </div>
+            <div>
+                <div>Investor</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section__header">
+        <div class="header">
+            <div class="header__container">
+                <%- include ('../partials/header') %>
+            </div>
+
+            <!-- Menu for sm-resolution, md-resolution, & lg-resolution -->
+            <div class="menu animate__animated animate__backInDown" id="nav__menu">
+                <%- include ('../partials/menu') %>
+            </div>
+            <!-- <div class="header__box"><img src="./assets/home.png" alt=""></div> -->
+            <div class="header__text">
+                <h2 class="header__main animated animate__shakeX">New. African. Revolution.
+                    <span class="container__primary">Pioneer.</span></h2>
+            </div>
+            <div class="chatBox">
+                <button class="chatBox__btn">Chat Tim <i class='bx bx-chat'></i></button>
+            </div>
+        </div>
+    </section>
+    <!-- =========== JQuery Link ============== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./scripts/preload.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>

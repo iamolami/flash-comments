@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ================ Custom CSS Link ================= -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <title>About - Tim Akano</title>
+</head>
+
+<body>
+    <header class="header__container primary__wrapper">
+        <%- include ('../partials/header') %>
+    </header>
+
+    <!-- Menu for sm-resolution, md-resolution, & lg-resolution -->
+    <div class="menu animate__animated animate__backInDown" id="nav__menu">
+        <%- include ('../partials/menu') %>
+    </div>
+
+    <main class="main">
+        <div class="contact">
+            <div class="contact__wrapper">
+                <h3 class="contact__heading contact__main">Start your journey to greatness with Tim</h3>
+                <form action="#">
+                    <input type="text" name="name" id="name" class="contact__input" placeholder="Full Name" required>
+                    <input type="email" name="email" id="email" class="contact__input" placeholder="Email Address"
+                        required>
+                    <!-- <input type="number" name="number" id="number" class="contact__input" placeholder="Enter Your Age"> -->
+                    <select name="gender" id="gender" class="contact__input">
+                        <option value="gender">Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <select name="gender" id="gender" class="contact__input">
+                        <option value="country">Where are you from?</option>
+                        <option value="nigeria">Nigeria</option>
+                        <option value="ghana">Ghana</option>
+                        <option value="south africa">South Africa</option>
+                        <option value="malawi">Malawi</option>
+                        <option value="usa">United State of America</option>
+                    </select>
+                    <input type="tel" name="tel" id="tel" class="contact__input" placeholder="Phone Number(whatsapp)"
+                        required>
+                    <textarea name="textarea" id="textarea" cols="5" rows="5" class="contact__input conatct__textarea"
+                        placeholder="Tell me about you" required></textarea>
+                    <button type="submit" class="contact__button">Sign Up</button>
+                </form>
+                <p class="contact__log">Already have an account? <a href="#">Log in</a></p>
+            </div>
+            <div class="contact__wrapper"></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <%- include ('../partials/footer') %>
+    </footer>
+    <script src="./scripts/main.js"></script>
+
+    <!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+</body>
+
+</html>

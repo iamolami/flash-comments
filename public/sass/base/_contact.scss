@@ -1,0 +1,117 @@
+.contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 10rem;
+
+  @include for_breakpoint(sm-resolution md-resolution) {
+    padding: 0 2rem;
+    flex-direction: column;
+  }
+
+  &__wrapper {
+    flex: 1;
+    height: 100vh;
+    margin-top: 2rem;
+
+    @include for_breakpoint(sm-resolution md-resolution) {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+    font-weight: $font-bold;
+    margin: 1.2rem 0rem;
+    text-transform: capitalize;
+
+    @include for_breakpoint(sm-resolution md-resolution) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__main {
+    font-size: 1.6rem;
+
+    @include for_breakpoint(sm-resolution md-resolution) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__input {
+    position: relative;
+    display: block;
+    width: 80%;
+    padding: 0.9rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    outline: none;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    font-weight: $font-light;
+    font-family: inherit;
+    color: $text-color;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    transition: all 300ms ease-in-out;
+
+    @include for_breakpoint(sm-resolution md-resolution) {
+      width: 100%;
+      padding: 0.7rem;
+      font-size: 0.6rem;
+    }
+
+    &:not(:first-child) {
+      margin-top: 1.7rem;
+    }
+
+    &:focus {
+      border: 1px solid rgb(28, 82, 155, 0.5);
+    }
+  }
+
+  &__button {
+    width: 80%;
+    padding: 0.9rem;
+    border: none;
+    background-color: $dark-blue;
+    outline: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: $font-semi-light;
+    font-family: inherit;
+    color: $color-white;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 1.8rem;
+    cursor: pointer;
+
+    @include for_breakpoint(sm-resolution md-resolution) {
+      width: 100%;
+    }
+  }
+
+  &__textarea {
+    height: 20vh;
+  }
+
+  option {
+    font-family: inherit;
+    font-size: 0.7rem;
+    color: $text-color;
+
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+  }
+
+  &__log {
+    margin-top: 1.2rem;
+    font-size: 1rem;
+    color: $heading-color;
+
+    a {
+      color: $dark-blue;
+    }
+  }
+}

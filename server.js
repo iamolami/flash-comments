@@ -1,10 +1,10 @@
-var express = require('express');
-var path = require('path');
-//var bodyParser = require('body-parser');
+const express = require('express');
+const path = require('path');
+//const ejs = require('ejs');
 
-var Pusher = require('pusher');
+const Pusher = require('pusher');
 
-var pusher = new Pusher({
+const pusher = new Pusher({
   appId: '1279731',
   key: '4096fab5b7a9133e8131',
   secret: '299dd4b74fb947c9a714',
@@ -12,17 +12,51 @@ var pusher = new Pusher({
   useTLS: true
 });
 
-var app = express();
+const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({
   extended: false
 }));
-app.use(express.static(path.join(__dirname, 'public')));
 
-app.post('/comment', function (req, res) {
+app.use(express.static(path.join(__dirname, 'public')));
+app.set('view engine', 'ejs');
+
+const PORT = process.env.PORT || 9000
+const HOST = '0.0.0.0';
+
+app.listen(PORT, HOST, () => {
+  console.log('Example app listening on port 9000!')
+});
+
+app.get('/', (req, res) => {
+  res.render('pages/index');
+});
+
+app.get('/about', (req, res) => {
+  res.render('pages/about');
+});
+
+app.get('/contact', (req, res) => {
+  res.render('pages/contact');
+});
+
+app.get('/articles', (req, res) => {
+  res.render('pages/articles');
+});
+
+app.get('/signup', (req, res) => {
+  res.render('pages/signup');
+});
+
+// app.get('/flash', (req, res) => {
+//   res.render('pages/flash');
+// });
+
+
+app.post('/articles', (req, res) => {
   console.log(req.body);
-  var newComment = {
+  const newComment = {
     name: req.body.name,
     email: req.body.email,
     comment: req.body.comment
@@ -34,17 +68,10 @@ app.post('/comment', function (req, res) {
 });
 
 // Error Handler for 404 Pages
-app.use(function (req, res, next) {
-  var error404 = new Error('Route Not Found');
+app.use((req, res, next) => {
+  const error404 = new Error('Route Not Found');
   error404.status = 404;
   next(error404);
 });
 
 module.exports = app;
-
-const PORT = process.env.PORT || 9000
-const HOST = '0.0.0.0';
-
-app.listen(PORT, HOST, () => {
-  console.log('Example app listening on port 9000!')
-});

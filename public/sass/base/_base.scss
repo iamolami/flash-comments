@@ -1,0 +1,32 @@
+/* ============ General Reset ================== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+
+    &::after {
+        padding: 0;
+        margin: 0;
+        box-sizing: inherit;
+    }
+
+    &::before {
+        padding: 0;
+        margin: 0;
+        box-sizing: inherit;
+    }
+}
+
+body {
+    font-size: $text-size;
+    font-family: $text-family;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a { text-decoration: none; }
+
+ul, li {
+    list-style: none;
+}

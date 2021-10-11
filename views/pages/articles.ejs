@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ================ Custom CSS Link ================= -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <title>About - Tim Akano</title>
+</head>
+
+<body>
+    <div class="header__container about__sticky primary__wrapper" id="navbar">
+        <%- include ('../partials/header') %>
+    </div>
+
+    <!-- Menu for sm-resolution, md-resolution, & lg-resolution -->
+    <div class="menu animate__animated animate__backInDown" id="nav__menu">
+        <%- include ('../partials/menu') %>
+    </div>
+
+    <main class="main">
+        <div class="articles">
+            <div class="articles__container">
+                <img src="./assets/_DSC3307.jpg" alt="" class="articles__picture">
+            </div>
+
+            <div class="articles__wrapper">
+                <div class="articles__box">
+                    <div class="articles__text">
+                        <h3 class="articles__heading">book spotlight</h3>
+                        <h3 class="articles__main">THE SANDS ARE SHIFTING.....</h3>
+                        <p class="articles__info">
+                            _‘’ *_Life is a desert of shifting sand dunes. Unpredictable. Erratic. Harmony changes into
+                            dissonance, the immediate outlives the profound, esoteric becomes clichéd. When talking
+                            about
+                            uncertainty we should lean heavily on facts, just as the court of law does when
+                            interrogating
+                            witnesses. Facts form a sort of bedrock on which we can build the shifting sands of
+                            uncertainty’’* ._ Poet/Singer.*
+                        </p>
+                        <p class="articles__info">
+                            Stop!
+                            Look under your feet
+                            Can you feel the shifting sands?
+                            It seems as if to reach paradise man must pass through the inferno bypass. Hmmm…
+                            Unusual times require unusual style, permit me therefore to conclude this article before we
+                            start,
+                            and more so since we are reasonably certain of the consequences of what is unrevealing
+                            before
+                            us.
+                        </p>
+                        <button class="articles__btn">Download PDF <i class='bx bx-down-arrow-alt'></i></button>
+                    </div>
+                </div>
+                <div class="articles__box articles__01">
+                    <img src="./assets/SAND.png" alt="" class="articles__img">
+                </div>
+            </div>
+
+            <div class="articles__elemento articles__bg">
+                <div class="articles__elementoBox">
+                    <div class="articles__elementoLeft">
+                        <img src="./assets/STORM.png" alt="" class="articles__elementoImg">
+                    </div>
+                    <div class="articles__elementoRight">
+                        <h3 class="articles__main">STABILITY IN THE STORM</h3>
+                        <p class="articles__info articles__description">
+                            Where are the ’EXIT’ signs? Or when will things return to normal? When are we landing and at
+                            which airport? What just happened? What comes next? Musing. Soliloquising. Thinking aloud.
+                            Connecting the dots. Plotting the graphs year, and
+                            therefore, plotting the points requires special techniques.......
+                        </p>
+                        <button class="articles__btn">
+                            <a href="/#" download="STABILITY IN THE STORM">
+                                Download PDF <i class='bx bx-down-arrow-alt'></i>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="articles__elementoBox">
+                    <div class="articles__elementoLeft">
+                        <img src="./assets/collapsing.png" alt="" class="articles__elementoImg">
+                    </div>
+                    <div class="articles__elementoRight">
+                        <h3 class="articles__main">THE COLLAPSING WORLD BRIDGE</h3>
+                        <p class="articles__info articles__description">
+                            Unarguably, the world’s bridge is collapsing. The Political, Economic, Social, Health.
+                            Military,
+                            Education and Cultural bridges that connect us are all falling apart, in different direction
+                            at different degrees. The bridge of peace is collapsing and the bridge of war is now under
+                            construction, perhaps....
+                        </p>
+                        <button class="articles__btn">Download PDF <i class='bx bx-down-arrow-alt'></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="articles__elemento">
+                <div class="articles__elementoBox articles__mv">
+                    <div class="articles__elementoLeft">
+                        <img src="./assets/My Post.png" alt="" class="articles__elementoImg">
+                    </div>
+                    <div class="articles__elementoRight">
+                        <h3 class="articles__main">AS AMERICA'S SKY GETS DARK</h3>
+                        <p class="articles__info articles__description">
+                            All empires fall, eventually. But why? It’s not for lack of power. In fact, it seems to be
+                            the
+                            opposite. Their power lulls them into comfort. They become undisciplined. Those who had to
+                            earn
+                            power are......
+                        </p>
+                        <button class="articles__btn">Download PDF <i class='bx bx-down-arrow-alt'></i></button>
+                    </div>
+                </div>
+
+                <div class="articles__elementoBox articles__mf">
+                    <div class="articles__elementoLeft">
+                        <img src="./assets/2021.png" alt="" class="articles__elementoImg">
+                    </div>
+                    <div class="articles__elementoRight">
+                        <h3 class="articles__main">2021+: WHAT’S COMING NEXT?</h3>
+                        <p class="articles__info articles__description">
+                            It’s called the brave new world. Now. When the wind of change blows, says the Chinese
+                            proverb,
+                            some people build walls while others build windmills. What does our future holds in 2021?
+                            What lies
+                            at the other side of the pandemic coin-...
+                        </p>
+                        <button class="articles__btn">Download PDF <i class='bx bx-down-arrow-alt'></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================== Comment Section =================== -->
+        <div class="comment">
+            <form id="comment-form" method="POST" action="/articles">
+                <div class="comment__row">
+                    <input type="text" required placeholder="enter your name" id="new_comment_name"
+                        class="comment__input">
+                    <input placeholder="enter valid email" required type="email" id="new_comment_email"
+                        class="comment__input">
+                </div>
+                <div class="comment__output">
+                    <textarea type="text" placeholder="What do you think?....." required id="new_comment_text" rows="10"
+                        cols="30" class="comment__textarea"></textarea>
+                    <button type="submit" class="comment__btn">Comment</button>
+                </div>
+            </form>
+            <div id="comments-list">
+                <template id="comment-template">
+                    <div class="comment__hidden">
+                        <div class="comment__user">
+                            <div class="user-icon"><img src="./assets/user.png"></div>
+                        </div>
+                        <div class="comment__info">
+                            <div class="comment__details">
+                                <div class="name comment__name">{{name}}</div>
+                                <div class="email comment__email">{{email}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment__textBox">
+                        <div class="text comment__description">{{comment}}</div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <%- include ('../partials/footer') %>
+    </footer>
+    <script type="text/javascript" src="https://js.pusher.com/3.2/pusher.min.js"></script>
+
+    <!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>

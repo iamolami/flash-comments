@@ -1,0 +1,316 @@
+.articles {
+  padding-top: 0rem;
+
+  @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+    padding-top: 0;
+  }
+
+  &__container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  &__picture {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    box-shadow: $box-shadow;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: row;
+    padding: 2rem 7rem;
+    margin-top: 3rem;
+
+    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+      flex-direction: column;
+      padding: 2rem 2rem;
+      margin-top: 1.8rem;
+    }
+  }
+
+  &__box {
+    flex: 1;
+    //height: 55vh;
+  }
+
+  &__01 {
+    margin-top: 1.5rem;
+  }
+
+  &__text {
+    padding: 2rem;
+
+    @include for_breakpoint(sm-resolution md- xl-resolution) {
+      padding: 0;
+    }
+  }
+
+  &__heading {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: $text-color;
+    font-weight: $font-semi-light;
+    margin-bottom: 0.8rem;
+  }
+
+  &__main {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: $heading-color;
+    font-weight: $font-bold;
+    font-family: $heading-family;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.1rem;
+  }
+
+  &__info {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+    color: $text-color;
+
+    &:not(:first-child) {
+      margin-top: 1.2rem;
+    }
+  }
+
+  &__description {
+    font-size: 0.8rem;
+  }
+
+  &__elemento {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 7rem;
+    flex-direction: row;
+    margin-top: 5rem;
+
+    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+      padding: 2rem 2rem;
+      flex-direction: column;
+      margin-top: 0rem;
+    }
+  }
+
+  &__elementoBox {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+      flex-direction: column;
+    }
+
+    &:not(:first-child) {
+      @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  &__mv {
+    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+      margin-top: -2.5rem;
+    }
+  }
+
+  &__bg {
+    background-color: $bg-color;
+  }
+
+  &__elementoLeft {
+    flex-basis: 40%;
+    //height: 40vh;
+    //background-color: #eee;
+    text-align: center;
+    padding: 0.5rem;
+
+    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+      flex-basis: 100%;
+      text-align: left;
+    }
+  }
+
+  &__elementoRight {
+    flex-basis: 60%;
+    //height: 40vh;
+    padding: 2rem;
+
+    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+      padding: 0.5rem;
+      flex-basis: 60%;
+      //height: 40vh;
+    }
+  }
+
+  &__elementoImg {
+    width: 80%;
+    //height: 38vh;
+    box-shadow: $box-shadow;
+
+    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+      width: 100%;
+      margin-bottom: 1.5rem;
+      //height: 38vh;
+    }
+  }
+
+  &__btn {
+    padding: 0.7rem;
+    margin-top: 1.2rem;
+    background-color: transparent;
+    color: $dark-blue;
+    font-size: 0.9rem;
+    font-weight: $font-semi-light;
+    font-family: inherit;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    a {
+      color: $dark-blue;
+    }
+  }
+}
+
+.comment {
+  width: 100%;
+  //padding: 0 8rem;
+  margin: 2rem 0;
+  position: relative;
+
+  &__form {
+    width: 100%;
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 30vh;
+    font-size: 0.9rem;
+    font-family: inherit;
+    color: $text-color;
+    font-weight: $font-semi-light;
+    padding: 0.9rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    border-radius: 5px;
+  }
+
+  &__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 1rem;
+    padding: 0 8rem;
+
+    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+      padding: 0 2rem;
+      flex-direction: column;
+    }
+  }
+
+  &__output {
+    padding: 0 8rem;
+
+    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+      padding: 0 2rem;
+    }
+  }
+
+  &__input {
+    width: 49%;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-family: inherit;
+    color: $text-color;
+    font-weight: $font-semi-light;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    outline: none;
+    letter-spacing: 0.1rem;
+
+    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+      width: 100%;
+      padding: 0.7rem;
+      font-size: 0.7rem;
+
+      &:not(:first-child) {
+        margin-top: 1.2rem;
+      }
+    }
+  }
+
+  &__hidden {
+    display: flex;
+    justify-content: start;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &__user {
+    margin-right: 1.5rem;
+  }
+
+  &__info {
+    margin-top: 0.6rem;
+  }
+
+  &__name {
+    font-size: 0.7rem;
+    font-weight: $font-bold;
+    color: $heading-color;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  &__email {
+    font-size: 0.6rem;
+    font-style: italic;
+    color: $text-color;
+  }
+
+  &__textBox {
+    padding: 0 5.5rem;
+
+    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+      padding: 0 0.5rem;
+      margin-top: 0.9rem;
+    }
+  }
+
+  &__description {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    font-weight: $font-semi-light;
+    color: $text-color;
+  }
+}
+
+#comments-list {
+  padding: 0 8rem;
+
+  @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+    padding: 0 2rem;
+  }
+
+  &:not(:first-child) {
+    margin-top: 1rem;
+  }
+}

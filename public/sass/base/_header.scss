@@ -1,0 +1,241 @@
+.header {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../assets/_DSC3307.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include for_breakpoint(xl-resolution sm-resolution md-resolution) {
+    min-height: 100vh;
+  }
+
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 12vh;
+    //background-color: $dark-blue;
+    text-align: center;
+    padding: $mb-3 $mb-4;
+    display: flex;
+    justify-content: space-between;
+
+    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+      padding: 1rem 2rem;
+      //height: 10vh;
+    }
+  }
+
+  &__wrap {
+    text-align: left;
+  }
+
+  &__logo {
+    width: 100%;
+    height: 12vh;
+    margin-top: -2rem;
+    //background-color: red;
+
+    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+      margin-top: -0.5rem;
+      margin-left: -2rem;
+    }
+  }
+
+  &__navigation {
+    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+      display: none;
+    }
+  }
+
+  &__items {
+    line-height: 25px;
+  }
+
+  &__list {
+    display: inline-block;
+    margin: 0 1rem;
+  }
+
+  &__link {
+    position: relative;
+    color: $color-white;
+    font-size: 0.7rem;
+    font-weight: $font-semi-light;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    transition: all 0.4s ease-in-out;
+
+    &::after {
+      content: "";
+      width: 0%;
+      height: 1px;
+      background-color: $heading-color;
+      display: block;
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      bottom: -80%;
+      left: 0;
+      transition: all 0.4s ease-in-out;
+    }
+
+    &:hover {
+      color: $heading-color;
+
+      &::after {
+        width: 100%;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__text {
+    width: 30%;
+    position: absolute;
+    top: 35%;
+    right: 2%;
+
+    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+      width: 100%;
+      left: 0%;
+      top: 50%;
+      padding: 1rem 2rem;
+    }
+  }
+
+  &__main {
+    font-size: 70px;
+    font-weight: $font-semi-light;
+    color: #ffffff99;
+    font-family: $heading-family;
+    line-height: 5rem;
+
+    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+  }
+
+  &__box {
+    padding-left: 7rem;
+
+    img {
+      margin-bottom: 1rem;
+      width: 40%;
+      height: 80vh;
+    }
+  }
+}
+
+.chatBox {
+  width: 10%;
+  position: fixed;
+  bottom: 5%;
+  left: 2%;
+
+  @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+    width: 30%;
+    left: 60%;
+    bottom: 3%;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: $dark-blue;
+    color: $color-white;
+    font-size: 1.1rem;
+    font-weight: $font-bold;
+    border: none;
+    border-radius: 24px;
+    outline: none;
+    cursor: pointer;
+
+    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+      font-size: 0.9rem;
+      padding: 0.6rem;
+    }
+  }
+}
+
+.menu__toggle {
+  font-size: 1.7rem;
+  color: $color-white;
+  cursor: pointer;
+  //display: none;
+
+  @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+    margin-top: 0.5rem;
+    display: block;
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 12%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  // min-height: 100%;
+  background-color: $dark-blue;
+  padding: 2rem;
+  color: $color-white;
+  visibility: hidden;
+  z-index: 1000;
+  box-shadow: $box-shadow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: all 0.5s ease-in-out;
+
+  @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+    top: 10%;
+  }
+
+  &__list {
+    text-align: center;
+    &:not(:first-child) {
+      margin-top: 2rem;
+
+      @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 0.9rem;
+    font-weight: $font-semi-light;
+    color: $color-white;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+
+    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+      font-size: 0.7rem;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 2%;
+    right: 7%;
+    font-size: 1.7rem;
+
+    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.show-menu {
+  visibility: visible;
+  transform: translateY(0%);
+}
+
+.primary__wrapper {
+  background-color: $dark-blue;
+  box-shadow: $box-shadow;
+}
