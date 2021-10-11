@@ -1149,7 +1149,7 @@ ul, li {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 @media (max-width: 360px), (max-width: 479px), (max-width: 500px) {
   .header {
@@ -1302,7 +1302,8 @@ ul, li {
 }
 @media (max-width: 479px), (max-width: 500px), (max-width: 360px) {
   .menu__toggle {
-    margin-top: 0rem;
+    margin-top: 0.7rem;
+    font-size: 2.2rem;
     display: block;
   }
 }

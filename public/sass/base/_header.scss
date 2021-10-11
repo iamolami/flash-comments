@@ -5,7 +5,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  overflow: hidden;
+  overflow-y: hidden;
 
   @include for_breakpoint(xl-resolution sm-resolution md-resolution) {
     min-height: 100vh;
@@ -168,7 +168,8 @@
   //display: none;
 
   @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
-    margin-top: 0rem;
+    margin-top: 0.7rem;
+    font-size: 2.2rem;
     display: block;
   }
 }
