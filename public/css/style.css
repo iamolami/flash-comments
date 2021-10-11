@@ -154,6 +154,7 @@
   justify-content: space-between;
   align-items: stretch;
   flex-direction: row;
+  overflow-x: hidden;
 }
 @media (max-width: 479px), (max-width: 500px), (max-width: 360px) {
   .about__container {
@@ -177,8 +178,7 @@
 @media (max-width: 479px), (max-width: 500px), (max-width: 360px) {
   .about__container__image {
     width: 100%;
-    margin-top: 0;
-    margin: 2rem 1rem;
+    margin: 2rem 0rem;
     display: block;
   }
 }
@@ -399,7 +399,7 @@
 }
 @media (max-width: 479px), (max-width: 500px), (max-width: 360px) {
   .elementary__text {
-    width: 92%;
+    width: 90%;
   }
 }
 .elementary__info {
@@ -1149,6 +1149,7 @@ ul, li {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 @media (max-width: 360px), (max-width: 479px), (max-width: 500px) {
   .header {
@@ -1167,6 +1168,7 @@ ul, li {
 @media (max-width: 479px), (max-width: 500px), (max-width: 360px) {
   .header__container {
     padding: 1rem 2rem;
+    height: 13vh;
   }
 }
 .header__wrap {
@@ -1179,8 +1181,8 @@ ul, li {
 }
 @media (max-width: 479px), (max-width: 500px), (max-width: 360px) {
   .header__logo {
-    margin-top: -0.5rem;
-    margin-left: -2rem;
+    margin-left: -3rem;
+    height: 16vh;
   }
 }
 @media (max-width: 479px), (max-width: 500px), (max-width: 360px) {
@@ -1300,7 +1302,7 @@ ul, li {
 }
 @media (max-width: 479px), (max-width: 500px), (max-width: 360px) {
   .menu__toggle {
-    margin-top: 0.5rem;
+    margin-top: 0rem;
     display: block;
   }
 }
@@ -1418,6 +1420,7 @@ ul, li {
   justify-content: center;
   align-items: center;
   z-index: 7000;
+  overflow: hidden;
 }
 .container__text {
   font-size: 4rem;
@@ -1440,17 +1443,18 @@ ul, li {
 }
 
 .container__flip > div > div {
+  width: 100%;
   font-size: 2.25rem;
   color: #333;
   padding: 0.25rem 0.75rem;
   height: 45px;
   margin-bottom: 45px;
   display: inline-block;
-  font-weight: 300;
+  font-weight: 400;
 }
 @media (max-width: 479px), (max-width: 500px), (max-width: 360px) {
   .container__flip > div > div {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
   }
 }
@@ -1469,6 +1473,7 @@ ul, li {
   position: absolute;
   z-index: 5000;
   background-color: #fff;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

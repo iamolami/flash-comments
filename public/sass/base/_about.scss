@@ -7,6 +7,7 @@
   justify-content: space-between;
   align-items: stretch;
   flex-direction: row;
+  overflow-x: hidden;
 
   @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
     flex-direction: column;
@@ -32,8 +33,7 @@
     @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
       //margin-top: 22rem;
       width: 100%;
-      margin-top: 0;
-      margin: 2rem 1rem;
+      margin: 2rem 0rem;
       display: block;
     }
   }
@@ -256,7 +256,7 @@
     width: 50%;
 
     @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
-      width: 92%;
+      width: 90%;
     }
   }
 

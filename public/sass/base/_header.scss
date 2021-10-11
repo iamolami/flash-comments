@@ -5,6 +5,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 
   @include for_breakpoint(xl-resolution sm-resolution md-resolution) {
     min-height: 100vh;
@@ -22,7 +23,7 @@
 
     @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
       padding: 1rem 2rem;
-      //height: 10vh;
+      height: 13vh;
     }
   }
 
@@ -37,8 +38,8 @@
     //background-color: red;
 
     @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
-      margin-top: -0.5rem;
-      margin-left: -2rem;
+      margin-left: -3rem;
+      height: 16vh;
     }
   }
 
@@ -167,7 +168,7 @@
   //display: none;
 
   @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
-    margin-top: 0.5rem;
+    margin-top: 0rem;
     display: block;
   }
 }

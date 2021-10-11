@@ -8,6 +8,7 @@
   justify-content: center;
   align-items: center;
   z-index: 7000;
+  overflow: hidden;
 
   &__text {
     font-size: 4rem;
@@ -32,16 +33,17 @@
 }
 
 .container__flip > div > div {
+  width: 100%;
   font-size: 2.25rem;
   color: $text-color;
   padding: 0.25rem 0.75rem;
   height: 45px;
   margin-bottom: 45px;
   display: inline-block;
-  font-weight: $font-light;
+  font-weight: $font-semi-light;
 
   @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
   }
 }
@@ -60,4 +62,5 @@
   position: absolute;
   z-index: 5000;
   background-color: $color-white;
+  overflow: hidden;
 }
