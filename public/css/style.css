@@ -1145,7 +1145,7 @@ ul, li {
 .header {
   width: 100%;
   min-height: 100vh;
-  background-image: url("../assets/_DSC3307.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/_DSC3307.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1229,29 +1229,28 @@ ul, li {
   opacity: 1;
 }
 .header__text {
-  width: 30%;
+  width: 40%;
   position: absolute;
-  top: 35%;
-  right: 2%;
+  top: 40%;
+  left: 7%;
 }
 @media (max-width: 479px), (max-width: 500px), (max-width: 360px) {
   .header__text {
     width: 100%;
     left: 0%;
-    top: 50%;
+    top: 55%;
     padding: 1rem 2rem;
   }
 }
 .header__main {
   font-size: 70px;
-  font-weight: 400;
+  font-weight: 700;
   color: #ffffff99;
-  font-family: "Libre Baskerville", serif;
   line-height: 5rem;
 }
 @media (max-width: 479px), (max-width: 500px), (max-width: 360px) {
   .header__main {
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 3rem;
   }
 }
@@ -1267,14 +1266,13 @@ ul, li {
 .chatBox {
   width: 10%;
   position: fixed;
-  bottom: 5%;
-  left: 2%;
+  bottom: 1%;
+  right: 1%;
 }
 @media (max-width: 479px), (max-width: 500px), (max-width: 360px) {
   .chatBox {
     width: 30%;
-    left: 60%;
-    bottom: 3%;
+    bottom: 1%;
   }
 }
 .chatBox__btn {

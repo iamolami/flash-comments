@@ -49,7 +49,7 @@ closeMenu('menu__close', 'nav__menu')
 const sr = ScrollReveal({
     origin: 'top',
     distance: '30px',
-    duration: 2000,
+    duration: 1000,
     reset: true
 });
 
@@ -70,5 +70,5 @@ sr.reveal(`.articles__picture,
            .footer__menu,
            .footer__submit
            `, {
-    interval: 200
+    interval: 100
 })
