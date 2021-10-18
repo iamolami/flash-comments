@@ -43,32 +43,3 @@ const closeMenu = (toggleClose, navClose) => {
 }
 
 closeMenu('menu__close', 'nav__menu')
-
-
-/*==================== SCROLL REVEAL ANIMATION ====================*/
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '30px',
-    duration: 1000,
-    reset: true
-});
-
-sr.reveal(`.articles__picture, 
-           .articles__text, 
-           .articles__img,
-           .articles__elementoLeft, 
-           .articles__elementoRight,
-           .comment__input,
-           .comment__textarea,
-           .comment__btn,
-           .about__container__text,
-           .about__container__box,
-           .bx,
-           .footer__main,
-           .footer__input,
-           .footer__info,
-           .footer__menu,
-           .footer__submit
-           `, {
-    interval: 100
-})

@@ -1,5 +1,8 @@
 const express = require('express');
 const path = require('path');
+// const jsDom = require('jsdom');
+// const url = require('./public/scripts/detail')
+
 //const ejs = require('ejs');
 
 const Pusher = require('pusher');
@@ -13,7 +16,6 @@ const pusher = new Pusher({
 });
 
 const app = express();
-
 app.use(express.json());
 app.use(express.urlencoded({
   extended: false
@@ -49,9 +51,9 @@ app.get('/signup', (req, res) => {
   res.render('pages/signup');
 });
 
-// app.get('/flash', (req, res) => {
-//   res.render('pages/flash');
-// });
+app.get(`/detail`, (req, res) => {
+  res.render('pages/detail');
+});
 
 
 app.post('/articles', (req, res) => {

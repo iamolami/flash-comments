@@ -1,6 +1,5 @@
 /* ============== Google Font (Lato) ================ */
-@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
 /* ============= Variables ================ */
 /* ============= Colors =================== */
@@ -13,8 +12,8 @@ $color-black: #000;
 $bg-color: rgb(249, 249, 249);
 
 /* ============== Fonts =================== */
-$text-family: "Mulish", sans-serif;
-$heading-family: "Libre Baskerville", serif;
+$text-family: 'Nunito Sans', sans-serif;
+$heading-family: 'Nunito Sans', sans-serif;
 $font-thin: 100;
 $font-light: 300;
 $font-semi-light: 400;
