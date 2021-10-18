@@ -24,11 +24,11 @@ app.use(express.urlencoded({
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 
-const PORT = process.env.PORT || 9000
+const PORT = process.env.PORT || 9000;
 const HOST = '0.0.0.0';
 
 app.listen(PORT, HOST, () => {
-  console.log('Example app listening on port 9000!')
+  console.log('Example app listening on port 9000')
 });
 
 app.get('/', (req, res) => {
