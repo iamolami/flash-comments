@@ -43,3 +43,16 @@ const closeMenu = (toggleClose, navClose) => {
 }
 
 closeMenu('menu__close', 'nav__menu')
+
+/*==================== SCROLL REVEAL ANIMATION ====================*/
+window.sr = ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 2000,
+    reset: true
+});
+
+sr.reveal(`.'comment__list, .main__card, .details__box, .sh-use__box,
+            .about__container__text, .about__container__box, `, {
+    interval: 200
+})

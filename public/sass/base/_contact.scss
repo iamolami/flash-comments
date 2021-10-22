@@ -2,21 +2,48 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0 10rem;
+  padding: 0 5rem;
 
-  @include for_breakpoint(sm-resolution md-resolution) {
+  @include for_breakpoint(gtfxl-resolution txl-resolution exl-resolution) {
+    padding: 0 3rem;
+  }
+
+  @include for_breakpoint(
+    sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
+      lxl-resolution eexl-resolution crtxl-resolution mbpxl-resolution
+  ) {
     padding: 0 2rem;
-    flex-direction: column;
   }
 
   &__wrapper {
     flex: 1;
-    height: 100vh;
-    margin-top: 2rem;
+    height: 100%;
+    margin: 2rem;
 
-    @include for_breakpoint(sm-resolution md-resolution) {
-      margin-top: 1.5rem;
+    @include for_breakpoint(desktop3 desktop4) {
+      margin: 2rem 20%;
     }
+
+    @include for_breakpoint(
+      eexl-resolution crtxl-resolution mbpxl-resolution gtfxl-resolution
+        txl-resolution exl-resolution
+    ) {
+      margin: 2rem;
+    }
+
+    @include for_breakpoint(mdxl-resolution lxl-resolution) {
+      margin: 1.5rem;
+    }
+
+    @include for_breakpoint(
+      sm-resolution md-resolution xl-resolution smxl-resolution
+    ) {
+      margin: 1rem;
+    }
+  }
+
+  &__form {
+    width: 100%;
   }
 
   &__heading {
@@ -25,7 +52,10 @@
     margin: 1.2rem 0rem;
     text-transform: capitalize;
 
-    @include for_breakpoint(sm-resolution md-resolution) {
+    @include for_breakpoint(
+      sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
+        lxl-resolution eexl-resolution
+    ) {
       font-size: 1.4rem;
     }
   }
@@ -33,7 +63,10 @@
   &__main {
     font-size: 1.6rem;
 
-    @include for_breakpoint(sm-resolution md-resolution) {
+    @include for_breakpoint(
+      sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
+        lxl-resolution eexl-resolution
+    ) {
       font-size: 1.4rem;
     }
   }
@@ -41,7 +74,7 @@
   &__input {
     position: relative;
     display: block;
-    width: 80%;
+    width: 100%;
     padding: 0.9rem;
     border: 1px solid rgba(0, 0, 0, 0.2);
     background-color: transparent;
@@ -55,9 +88,25 @@
     letter-spacing: 0.1rem;
     transition: all 300ms ease-in-out;
 
-    @include for_breakpoint(sm-resolution md-resolution) {
+    @include for_breakpoint(desktop3 desktop4) {
+      width: 80%;
+    }
+
+    @include for_breakpoint(
+      sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
+        lxl-resolution eexl-resolution crtxl-resolution mbpxl-resolution
+    ) {
       width: 100%;
-      padding: 0.7rem;
+      padding: 0.8rem;
+      font-size: 0.6rem;
+    }
+
+    @include for_breakpoint(
+      min-sm-resolution min-md-resolution min-eexl-resolution min-xl-resolution
+        min-lxl-resolution min-mbpxl-resolution min-xxl-resolution
+    ) {
+      width: 100%;
+      padding: 0.8rem;
       font-size: 0.6rem;
     }
 
@@ -71,7 +120,7 @@
   }
 
   &__button {
-    width: 80%;
+    width: 20%;
     padding: 0.9rem;
     border: none;
     background-color: $dark-blue;
@@ -86,7 +135,14 @@
     margin-top: 1.8rem;
     cursor: pointer;
 
-    @include for_breakpoint(sm-resolution md-resolution) {
+    @include for_breakpoint(eexl-resolution crtxl-resolution mbpxl-resolution) {
+      width: 30%;
+    }
+
+    @include for_breakpoint(
+      sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
+        lxl-resolution
+    ) {
       width: 100%;
     }
   }

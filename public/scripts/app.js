@@ -1,56 +1,124 @@
-// Using IIFE for Implementing Module Pattern to keep the Local Space for the JS Variables
-(function () {
+let socket = io()
 
-  var serverUrl = "/",
-    comments = [],
-    pusher = new Pusher('4096fab5b7a9133e8131', {
-      cluster: 'ap2',
-      useTLS: true
-    }),
-    // Subscribing to the 'flash-comments' Channel
-    channel = pusher.subscribe('flash-comments'),
-    commentForm = document.getElementById('comment-form'),
-    commentsList = document.getElementById('comments-list'),
-    commentTemplate = document.getElementById('comment-template');
+const textarea = document.querySelector('#textarea')
+const submitBtn = document.querySelector('#submitBtn')
+const commentBox = document.querySelector('.comment__box')
+const username = document.querySelector('#text')
 
+submitBtn.addEventListener('click', (e) => {
+  e.preventDefault()
+  let comment = textarea.value
+  let user = username.value
 
-  // Binding to Pusher Event on our 'flash-comments' Channel
-  channel.bind('new_comment', newCommentReceived);
+  if (!comment && user) {
+    return
+  }
+  postComment(comment, user)
+})
 
-  // Adding to Comment Form Submit Event
-  commentForm.addEventListener("submit", addNewComment);
-
-  // New Comment Receive Event Handler
-  // We will take the Comment Template, replace placeholders & append to commentsList
-  function newCommentReceived(data) {
-    var newCommentHtml = commentTemplate.innerHTML.replace('{{name}}', data.name);
-    newCommentHtml = newCommentHtml.replace('{{email}}', data.email);
-    newCommentHtml = newCommentHtml.replace('{{comment}}', data.comment);
-    var newCommentNode = document.createElement('div');
-    newCommentNode.classList.add('comment');
-    newCommentNode.innerHTML = newCommentHtml;
-    commentsList.appendChild(newCommentNode);
+//Posting Data to DOM and syncing with database
+function postComment(comment, user) {
+  let data = {
+    username: user,
+    comment: comment
   }
 
-  function addNewComment(event) {
-    event.preventDefault();
-    var newComment = {
-      "name": document.getElementById('new_comment_name').value,
-      "email": document.getElementById('new_comment_email').value,
-      "comment": document.getElementById('new_comment_text').value
-    }
+  appendToDom(data)
+  textarea.value = ''
+  username.value = ''
 
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", serverUrl + "articles", true);
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState != 4 || xhr.status != 200) return;
+  broadcastComment(data)
 
-      // On Success of creating a new Comment
-      console.log("Success: " + xhr.responseText);
-      commentForm.reset();
-    };
-    xhr.send(JSON.stringify(newComment));
+  syncWithDb(data)
+}
+
+//Append Data to class
+function appendToDom(data) {
+  let list = document.createElement('li')
+  list.classList.add('comment__list')
+
+  let content = `
+    <div class="comment__row">
+      <div class="comment__user">
+        <img src="./assets/user.png" alt="user">
+      </div>
+      <div class="comment__card">
+        <h3 class="comment__name">${data.username}</h3>
+        <p class="comment__description">${data.comment}</p>
+        <div class="comment__span">
+          <i class='bx bx-time'></i>
+          <span>${moment(data.time).format('LT')}</span>
+        </div>
+      </div>
+    </div>
+
+  `
+  list.innerHTML = content
+
+  commentBox.prepend(list)
+}
+
+//Broadcasting Message
+function broadcastComment(data) {
+
+  socket.emit('comment', data)
+}
+
+socket.on('comment', (data) => {
+  appendToDom(data)
+})
+
+let timerId = null
+
+function debounce(func, timer) {
+  if (timerId) {
+    clearTimeout(timerId)
+  }
+  timerId = setTimeout(() => {
+    func()
+  }, timer)
+}
+
+let typingDiv = document.querySelector('.typing')
+socket.on('typing', (data) => {
+  typingDiv.innerText = `${data.username} is typing...`
+  debounce(() => {
+    typingDiv.innerText = ''
+  }, 1000)
+})
+
+textarea.addEventListener('keyup', (e) => {
+  socket.emit('typing', {
+    username
+  })
+})
+
+//Api Calls
+function syncWithDb(data) {
+  const headers = {
+    'Content-Type': 'application/json'
   }
 
-})();
+  fetch('/api/comments', {
+      method: 'Post',
+      body: JSON.stringify(data),
+      headers
+    })
+    .then(response => response.json())
+    .then(result => {
+      console.log(result)
+    })
+}
+
+function fetchComments() {
+  fetch('/api/comments')
+    .then(res => res.json())
+    .then(result => {
+      result.forEach((comment) => {
+        comment.time = comment.createdAt
+        appendToDom(comment)
+      })
+    })
+}
+
+window.onload = fetchComments

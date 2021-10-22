@@ -31,46 +31,31 @@
 
         <!-- ========================== Comment Section =================== -->
         <div class="comment">
-            <form id="comment-form" method="POST" action="/articles">
-                <div class="comment__row">
-                    <input type="text" required placeholder="enter your name" id="new_comment_name"
-                        class="comment__input">
-                    <input placeholder="enter valid email" required type="email" id="new_comment_email"
-                        class="comment__input">
+            <h4 class="comment__heading">Comments</h4>
+            <div class="comment__output">
+                <input type="text" name="text" id="text" class="comment__input" placeholder="Enter Your Name">
+                <textarea id="textarea" rows="3" class="comment__textarea" placeholder="Write a comment..."></textarea>
+                <button id="submitBtn" class="comment__btn">Post comment</button>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="typing text-success"></div>
+                    <ul class="comment__box">
+
+                    </ul>
                 </div>
-                <div class="comment__output">
-                    <textarea type="text" placeholder="Add your comment....." required id="new_comment_text" rows="10"
-                        cols="30" class="comment__textarea"></textarea>
-                    <button type="submit" class="comment__btn">Comment</button>
-                </div>
-            </form>
-            <div id="comments-list">
-                <template id="comment-template">
-                    <div class="comment__hidden">
-                        <div class="comment__user">
-                            <div class="user-icon"><img src="./assets/user.png"></div>
-                        </div>
-                        <div class="comment__info">
-                            <div class="comment__details">
-                                <div class="name comment__name">{{name}}</div>
-                                <div class="email comment__email">{{email}}</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comment__textBox">
-                        <div class="text comment__description">{{comment}}</div>
-                    </div>
-                </template>
             </div>
         </div>
     </main>
     <footer class="footer">
         <%- include ('../partials/footer') %>
     </footer>
-    <script type="text/javascript" src="https://js.pusher.com/3.2/pusher.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment.min.js"></script>
     <script src="./scripts/app.js"></script>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/index.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </body>
 
 </html>

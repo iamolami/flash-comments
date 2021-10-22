@@ -1,5 +1,5 @@
 /* ============== Google Font (Lato) ================ */
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
 
 /* ============= Variables ================ */
 /* ============= Colors =================== */
@@ -12,16 +12,16 @@ $color-black: #000;
 $bg-color: rgb(249, 249, 249);
 
 /* ============== Fonts =================== */
-$text-family: 'Nunito Sans', sans-serif;
-$heading-family: 'Nunito Sans', sans-serif;
+$text-family: "Nunito Sans", sans-serif;
+$heading-family: "Nunito Sans", sans-serif;
 $font-thin: 100;
 $font-light: 300;
 $font-semi-light: 400;
 $font-bold: 700;
 $font-semi-bold: 900;
 $text-size: 62.8%;
-$box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+  0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
 /* ============== Margins ============== */
 $mb-1: 0.5rem;

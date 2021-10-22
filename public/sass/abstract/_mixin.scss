@@ -1,31 +1,145 @@
 $size__site_content_width: 1024px;
 
-/* Media Queries */ 
-$media_queries : (
-    'xl-resolution' : screen and (max-width: 360px),
-    'sm-resolution' : screen and (max-width: 479px),
-    'md-resolution' : screen and (max-width: 500px),
-    'tablet'    : screen and (min-width: 668px) and (max-width: $size__site_content_width),
-    'desktop'   : screen and (min-width: ($size__site_content_width + 1)),
-    'retina2'   : screen and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi),
-    'retina3'   : screen and (-webkit-min-device-pixel-ratio: 3) and (min-resolution: 288dpi),
-    'landscape' : screen and (orientation:landscape),    
-    'portrait'  : screen and (orientation:portrait)
+/* Media Queries */
+$media_queries: (
+  "sm-resolution": screen
+    and(
+      max-width: 360px,
+    ),
+  "md-resolution": screen
+    and(
+      max-width: 479px,
+    ),
+  "xl-resolution": screen
+    and(
+      max-width: 500px,
+    ),
+  "smxl-resolution": screen
+    and(
+      max-width: 575px,
+    ),
+  "mdxl-resolution": screen
+    and(
+      max-width: 599px,
+    ),
+  "lxl-resolution": screen
+    and(
+      max-width: 639px,
+    ),
+  "xxl-resolution": screen
+    and(
+      max-width: 767px,
+    ),
+  "eexl-resolution": screen
+    and(
+      max-width: 800px,
+    ),
+  "crtxl-resolution": screen
+    and(
+      max-width: 900px,
+    ),
+  "mbpxl-resolution": screen
+    and(
+      max-width: 959px,
+    ),
+  "gtfxl-resolution": screen
+    and(
+      max-width: 979px,
+    ),
+  "txl-resolution": screen
+    and(
+      max-width: 985px,
+    ),
+  "exl-resolution": screen
+    and(
+      max-width: 991px,
+    ),
+  "tablet": screen
+    and(
+      min-width: 668px,
+    )
+    and(
+      max-width: $size__site_content_width,
+    ),
+  "desktop1": screen
+    and(
+      max-width: 1169px,
+    ),
+  "desktop2": screen
+    and(
+      max-width: 1199px,
+    ),
+  "desktop3": screen
+    and(
+      max-width: 1366px,
+    ),
+  "desktop4": screen
+    and(
+      max-width: 1439px,
+    ),
+  "desktop5": screen
+    and(
+      max-width: 1599px,
+    ),
+  //Min-width
+  "min-sm-resolution": screen
+    and(
+      min-width: 480px,
+    ),
+  "min-md-resolution": screen
+    and(
+      min-width: 576px,
+    ),
+  "min-xl-resolution": screen
+    and(
+      min-width: 600px,
+    ),
+  "min-lxl-resolution": screen
+    and(
+      min-width: 641px,
+    ),
+  "min-xxl-resolution": screen
+    and(
+      min-width: 767px,
+    ),
+  "min-eexl-ressolution": screen
+    and(
+      min-width: 782px,
+    ),
+  "min-crfxl-resolution": screen
+    and(
+      min-width: 960px,
+    ),
+  "min-mbpxl-resolution": screen
+    and(
+      min-width: 992px,
+    ),
+  "min-gtfxl-resolution": screen
+    and(
+      min-width: 1025px,
+    ),
+  "min-txl-resolution": screen
+    and(
+      min-width: 1200px,
+    ),
+  "min-exl-resolution": screen
+    and(
+      min-width: 1444px,
+    ),
 );
 
 @mixin for_breakpoint($breakpoints) {
-    $conditions : ();
-    @each $breakpoint in $breakpoints {
-        // If the key exists in the map
-        $conditions: append(
-            $conditions,
-            #{inspect(map-get($media_queries, $breakpoint))},
-            comma
-        );
-    }
+  $conditions: ();
+  @each $breakpoint in $breakpoints {
+    // If the key exists in the map
+    $conditions: append(
+      $conditions,
+      #{inspect(map-get($media_queries, $breakpoint))},
+      comma
+    );
+  }
 
-    @media #{$conditions} {
-        @content;
-    }
-
+  @media #{$conditions} {
+    @content;
+  }
 }

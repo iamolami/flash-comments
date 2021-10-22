@@ -9,7 +9,14 @@
   flex-direction: row;
   overflow-x: hidden;
 
-  @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+  // @include for_breakpoint(eexl-resolution) {
+  //   flex-direction: row;
+  // }
+
+  @include for_breakpoint(
+    sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
+      lxl-resolution xxl-resolution eexl-resolution
+  ) {
     flex-direction: column;
   }
 
@@ -23,26 +30,74 @@
     margin-left: 6rem;
     margin-top: -2rem;
 
-    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+    @include for_breakpoint(eexl-resolution) {
+      width: 60%;
+    }
+
+    @include for_breakpoint(
+      crtxl-resolution mbpxl-resolution gtfxl-resolution txl-resolution
+        exl-resolution tablet desktop1 desktop2 desktop3 desktop4
+        min-gtfxl-resolution
+    ) {
+      width: 70%;
+      margin: 1rem auto;
+      display: block;
+    }
+
+    @include for_breakpoint(
+      sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
+        lxl-resolution xxl-resolution eexl-resolution
+    ) {
       display: none;
       margin-left: 0;
     }
   }
 
   &__image {
-    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+    @include for_breakpoint(
+      sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
+        lxl-resolution xxl-resolution desktop3 desktop4
+    ) {
       //margin-top: 22rem;
-      width: 100%;
-      margin: 2rem 0rem;
+      width: 80%;
+      margin: 1rem auto;
+      display: block;
+    }
+
+    @include for_breakpoint(
+      crtxl-resolution mbpxl-resolution gtfxl-resolution txl-resolution
+        exl-resolution tablet desktop3 desktop4
+    ) {
+      width: 70%;
+      margin: 4rem auto;
       display: block;
     }
   }
 
   &__pic {
-    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
-      width: 100%;
+    @include for_breakpoint(
+      sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
+        lxl-resolution xxl-resolution eexl-resolution
+    ) {
+      width: 80%;
       margin-top: 0;
-      margin: 2rem 1rem;
+      margin: 1rem auto;
+      display: block;
+    }
+
+    @include for_breakpoint(eexl-resolution) {
+      width: 60%;
+      margin: 1rem auto;
+      display: block;
+    }
+
+    @include for_breakpoint(
+      crtxl-resolution mbpxl-resolution gtfxl-resolution txl-resolution
+        exl-resolution tablet min-gtfxl-resolution desktop1 desktop2 desktop3
+        desktop4
+    ) {
+      width: 70%;
+      margin: 1rem auto;
       display: block;
     }
   }
@@ -50,7 +105,26 @@
   &__text {
     padding-left: $mb-5;
 
-    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+    // @include for_breakpoint(xxl-resolution) {
+    //   background-color: rgb(28, 18, 18);
+    //   width: 100%;
+    // }
+
+    @include for_breakpoint(desktop1 desktop2 min-gtfxl-resolution) {
+      padding: 0 4rem;
+    }
+
+    @include for_breakpoint(
+      gtfxl-resolution txl-resolution exl-resolution tablet
+    ) {
+      padding: 0 3rem;
+    }
+
+    @include for_breakpoint(
+      sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
+        lxl-resolution xxl-resolution eexl-resolution crtxl-resolution
+        mbpxl-resolution
+    ) {
       padding-left: 2rem;
       padding-right: 2rem;
     }
@@ -64,7 +138,22 @@
     letter-spacing: 0.1rem;
     margin-top: 17rem;
 
-    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+    @include for_breakpoint(min-exl-resolution min-gtfxl-resolution) {
+      margin-top: 17rem;
+    }
+    @include for_breakpoint(desktop3 desktop4) {
+      margin-top: 15rem;
+    }
+
+    @include for_breakpoint(desktop1 desktop2) {
+      margin-top: 2rem;
+    }
+
+    @include for_breakpoint(
+      sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
+        lxl-resolution xxl-resolution eexl-resolution crtxl-resolution
+        mbpxl-resolution gtfxl-resolution txl-resolution exl-resolution tablet
+    ) {
       margin-top: 2rem;
       font-size: 0.8rem;
     }
@@ -87,7 +176,10 @@
     font-weight: $font-semi-light;
     margin-bottom: 1.6rem;
 
-    @include for_breakpoint(sm-resolution md-resolution) {
+    @include for_breakpoint(
+      sm-resolution md-resolution smxl-resolution mdxl-resolution lxl-resolution
+        xxl-resolution eexl-resolution
+    ) {
       font-size: 2rem;
     }
   }
@@ -97,7 +189,10 @@
     color: $text-color;
     line-height: 2.2rem;
 
-    @include for_breakpoint(sm-resolution md-resolution) {
+    @include for_breakpoint(
+      sm-resolution md-resolution smxl-resolution mdxl-resolution lxl-resolution
+        xxl-resolution eexl-resolution
+    ) {
       font-size: 0.9rem;
     }
   }
@@ -131,7 +226,10 @@
     color: $text-color;
     line-height: 2.2rem;
 
-    @include for_breakpoint(sm-resolution md-resolution) {
+    @include for_breakpoint(
+      sm-resolution md-resolution smxl-resolution mdxl-resolution lxl-resolution
+        xxl-resolution eexl-resolution
+    ) {
       font-size: 0.9rem;
     }
 
@@ -155,7 +253,10 @@
 .about__margin {
   padding-right: $mb-5;
 
-  @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+  @include for_breakpoint(
+    sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
+      xxl-resolution lxl-resolution eexl-resolution
+  ) {
     padding-right: 2rem;
     margin-top: -10rem;
   }
@@ -164,7 +265,10 @@
   //margin-top: 10rem;
   padding-right: $mb-5;
 
-  @include for_breakpoint(sm-resolution md-resolution) {
+  @include for_breakpoint(
+    sm-resolution md-resolution smxl-resolution mdxl-resolution lxl-resolution
+      xxl-resolution eexl-resolution
+  ) {
     margin-top: -5rem;
     padding-right: 2rem;
   }
@@ -175,7 +279,10 @@
 .about__vertical {
   border-left: 1px solid rgba(0, 0, 0, 0.2);
 
-  @include for_breakpoint(sm-resolution md-resolution) {
+  @include for_breakpoint(
+    sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
+      xxl-resolution lxl-resolution eexl-resolution
+  ) {
     border-left: none;
   }
 }
@@ -192,7 +299,10 @@
   align-items: center;
   flex-direction: column;
 
-  @include for_breakpoint(sm-resolution md-resolution) {
+  @include for_breakpoint(
+    sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
+      xxl-resolution lxl-resolution eexl-resolution
+  ) {
     display: none;
   }
 
@@ -234,7 +344,10 @@
   background-color: $bg-color;
   padding-top: 1.8rem;
 
-  @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+  @include for_breakpoint(
+    sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
+      lxl-resolution xxl-resolution eexl-resolution
+  ) {
     margin-top: 1rem;
   }
 
@@ -246,8 +359,11 @@
     margin-bottom: 1.8rem;
     font-style: italic;
 
-    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
-      font-size: 1.4rem;
+    @include for_breakpoint(
+      sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
+        lxl-resolution xxl-resolution eexl-resolution
+    ) {
+      font-size: 1.5rem;
       margin-bottom: 1.5rem;
     }
   }
@@ -255,7 +371,16 @@
   &__text {
     width: 50%;
 
-    @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+    @include for_breakpoint(desktop1 desktop2) {
+      width: 80%;
+    }
+
+    @include for_breakpoint(
+      sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
+        lxl-resolution xxl-resolution eexl-resolution crtxl-resolution
+        mbpxl-resolution gtfxl-resolution txl-resolution exl-resolution tablet
+        min-gtfxl-resolution
+    ) {
       width: 90%;
     }
   }
@@ -265,31 +390,26 @@
     line-height: 2rem;
     color: $text-color;
 
-    @include for_breakpoint(sm-resolution md-resolution) {
+    @include for_breakpoint(eexl-resolution) {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+
+    @include for_breakpoint(
+      sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
+        lxl-resolution xxl-resolution
+    ) {
       font-size: 0.8rem;
       line-height: 1.5rem;
     }
   }
 
   &__box {
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
-    margin-bottom: 2rem;
-  }
-
-  &__imgBox {
-    width: 5rem;
-    height: 5rem;
-    background-color: $color-black;
-    border-radius: 50%;
-    margin-right: 1.5rem;
-
-    @include for_breakpoint(sm-resolution md-resolution) {
-      width: 4rem;
-      height: 4rem;
-      margin-right: 0.5rem;
-    }
+    align-items: center;
+    margin-bottom: 3rem;
   }
 
   &__main {
@@ -299,7 +419,14 @@
     color: $dark-blue;
     margin-bottom: 1rem;
 
-    @include for_breakpoint(sm-resolution md-resolution) {
+    @include for_breakpoint(eexl-resolution) {
+      font-size: 1.2rem;
+    }
+
+    @include for_breakpoint(
+      sm-resolution md-resolution mdxl-resolution lxl-resolution xxl-resolution
+        eexl-resolution
+    ) {
       font-size: 0.9rem;
     }
   }
@@ -309,7 +436,14 @@
     font-weight: $font-light;
     color: $heading-color;
 
-    @include for_breakpoint(sm-resolution md-resolution) {
+    @include for_breakpoint(eexl-resolution) {
+      font-size: 1rem;
+    }
+
+    @include for_breakpoint(
+      sm-resolution md-resolution mdxl-resolution lxl-resolution xxl-resolution
+        eexl-resolution
+    ) {
       font-size: 0.8rem;
     }
   }
@@ -322,7 +456,14 @@
   padding-left: 5rem;
   padding-right: 5rem;
 
-  @include for_breakpoint(sm-resolution md-resolution) {
+  @include for_breakpoint(desktop1 desktop2) {
+    padding: 0 4rem;
+  }
+
+  @include for_breakpoint(
+    sm-resolution md-resolution mdxl-resolution lxl-resolution xxl-resolution
+      eexl-resolution
+  ) {
     padding-left: 2rem;
     padding-right: 2rem;
     //height: 60vh;

@@ -23,11 +23,11 @@
         <%- include ('../partials/menu') %>
     </div>
 
-    <main class="main">
+    <main>
         <div class="contact">
             <div class="contact__wrapper">
                 <h3 class="contact__heading">Contact Tim</h3>
-                <form action="#">
+                <form action="#" class="contact__form">
                     <input type="text" name="name" id="name" class="contact__input" placeholder="Full Name" required>
                     <input type="email" name="email" id="email" class="contact__input" placeholder="Email Address"
                         required>
@@ -39,70 +39,10 @@
                     <button type="submit" class="contact__button">Submit</button>
                 </form>
             </div>
-            <div class="contact__wrapper"></div>
         </div>
     </main>
     <footer class="footer">
-        <div class="footer__container">
-            <div class="footer__box">
-                <div class="footer__icons">
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
-                    <a href="#"><i class='bx bxl-twitter'></i></a>
-                    <a href="#"><i class='bx bxl-whatsapp'></i></a>
-                </div>
-
-                <div class="footer__form">
-                    <h3 class="footer__main">Join for Monthly Insights</h3>
-                    <form action="#">
-                        <input type="email" name="email" id="email" class="footer__input" placeholder="Enter An Email"
-                            required>
-                        <button type="submit" class="footer__submit"><i class='bx bx-send'></i></button>
-                    </form>
-                </div>
-                <p class="footer__info">
-                    We will never share or spam your email address.
-                    By clicking "Sign Up" you agree to the Terms of Use and Privacy Policy
-                </p>
-            </div>
-            <div class="footer__box footer__elemento">
-                <div class="footer__wrapper">
-                    <ul class="footer__menu">
-                        <li class="footer__menuList"><a href="#" class="footer__menuLink">About Tim</a></li>
-                        <li class="footer__menuList"><a href="#" class="footer__menuLink">Articles</a></li>
-                        <li class="footer__menuList"><a href="contact.html" class="footer__menuLink">Contat</a></li>
-                    </ul>
-                </div>
-                <div class="footer__wrapper">
-                    <ul class="footer__menu">
-                        <li class="footer__menuList"><a href="#" class="footer__menuLink">In Media</a></li>
-                        <li class="footer__menuList"><a href="#" class="footer__menuLink">Gallery</a></li>
-                        <li class="footer__menuList"><a href="signup.html" class="footer__menuLink">Sign-up for
-                                Mentorship</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <span class="footer__line"></span>
-        <div class="footer__copy">
-            <div class="footer__right">
-                <ul>
-                    <li class="footer__list">© 2021 TIM AKANO</li>
-                    <li class="footer__list"><a href="#" class="footer__link">Privacy Policy</a></li>
-                    <li class="footer__list"><a href="#" class="footer__link">Term of Use</a></li>
-                </ul>
-            </div>
-
-            <div class="footer__right">
-                <ul>
-                    <li class="footer__list"><a href="#" class="footer__link">عربي</a></li>
-                    <li class="footer__list"><a href="#" class="footer__link">Français</a></li>
-                    <li class="footer__list"><a href="#" class="footer__link">Português</a></li>
-                </ul>
-            </div>
-        </div>
+        <%- include ('../partials/footer') %>
     </footer>
     <script src="./scripts/main.js"></script>
 </body>

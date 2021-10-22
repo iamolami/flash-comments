@@ -13,7 +13,7 @@
 }
 
 .comment__btn {
-  width: 10%;
+  width: 15%;
   padding: 0.6rem 0.7rem;
   border: none;
   border-radius: 5px;
@@ -25,9 +25,25 @@
   letter-spacing: 0.1rem;
   outline: none;
   cursor: pointer;
-  margin-top: 1.5rem;
+  margin: 1.5rem 0;
 
-  @include for_breakpoint(sm-resolution md-resolution xl-resolution) {
+  @include for_breakpoint(gtfxl-resolution txl-resolution exl-resolution) {
+    width: 18%;
+  }
+
+  @include for_breakpoint(
+    crtxl-resolution mbpxl-resolution min-mbpxl-resolution
+  ) {
+    width: 20%;
+  }
+
+  @include for_breakpoint(xxl-resolution eexl-resolution) {
+    width: 30%;
+  }
+
+  @include for_breakpoint(
+    sm-resolution md-resolution xl-resolution smxl-resolution
+  ) {
     width: 100%;
   }
 }
