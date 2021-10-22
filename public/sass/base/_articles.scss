@@ -240,7 +240,7 @@
       mbpxl-resolution
   ) {
     grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-    padding: 2rem;
+    padding: 1rem;
     gap: 30px 30px;
   }
 
@@ -248,7 +248,7 @@
     sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
   ) {
     grid-template: repeat(1, 1fr) / repeat(1, 1fr);
-    padding: 2rem;
+    padding: 1rem;
     gap: 30px 30px;
   }
 
@@ -263,29 +263,29 @@
     @include for_breakpoint(
       gtfxl-resolution txl-resolution exl-resolution tablet
     ) {
-      height: 95vh;
+      height: 100%;
     }
 
     @include for_breakpoint(
       min-txl-resolution min-exl-resolution min-gtfxl-resolution
     ) {
-      height: 70vh;
+      height: 100%;
     }
 
     @include for_breakpoint(eexl-resolution) {
-      height: 100vh;
+      height: 100%;
       padding: 1rem;
     }
 
     @include for_breakpoint(lxl-resolution xxl-resolution) {
-      height: 110vh;
+      height: 100%;
       padding: 1rem;
     }
 
     @include for_breakpoint(
       sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
     ) {
-      height: 117vh;
+      height: 100%;
       padding: 1rem;
     }
   }
@@ -294,20 +294,6 @@
     width: 100%;
     height: 50%;
     border-radius: 7px;
-
-    @include for_breakpoint(
-      lxl-resolution eexl-resolution min-txl-resolution min-exl-resolution
-    ) {
-      height: 50%;
-    }
-
-    @include for_breakpoint(mdxl-resolution) {
-      height: 65%;
-    }
-
-    @include for_breakpoint(xl-resolution smxl-resolution) {
-      height: 55%;
-    }
   }
 
   &__main {
