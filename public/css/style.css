@@ -1270,7 +1270,6 @@ ul, li {
 
 .footer {
   width: 100%;
-  height: 100%;
   background-color: #000;
   padding: 5rem 10rem;
 }
@@ -1287,13 +1286,13 @@ ul, li {
 @media (max-width: 360px), (max-width: 479px), (max-width: 500px), (max-width: 575px), (max-width: 599px), (max-width: 639px), (max-width: 767px), (max-width: 900px), (max-width: 959px) {
   .footer {
     padding: 3rem 2rem;
-    height: 100%;
   }
 }
 .footer__container {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  overflow-y: hidden;
 }
 @media (max-width: 360px), (max-width: 479px), (max-width: 575px), (max-width: 599px), (max-width: 639px), (max-width: 767px) {
   .footer__container {
@@ -1302,7 +1301,6 @@ ul, li {
 }
 .footer__box {
   flex: 1;
-  height: 35vh;
 }
 .footer__icons a {
   color: #fff;
@@ -1397,7 +1395,6 @@ ul, li {
   height: 1px;
   background-color: #333;
   display: block;
-  margin: 2rem 0;
 }
 @media (max-width: 900px), (max-width: 959px), (max-width: 979px), (max-width: 985px), (max-width: 991px), (max-width: 1024px), (min-width: 1025px), (max-width: 1169px), (max-width: 1199px), (max-width: 1366px), (max-width: 1439px) {
   .footer__line {
@@ -1490,6 +1487,28 @@ ul, li {
 }
 .footer__menuLink:hover {
   color: #333;
+}
+
+#google_translate_element select {
+  background-color: transparent;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  outline: none;
+  font-size: 0.9rem;
+  border: 1px solid #333;
+  border-radius: 7px;
+}
+#google_translate_element option {
+  color: #333;
+  font-family: inherit;
+  font-size: 0.9rem;
+  background-color: #000;
+}
+
+p {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .header {

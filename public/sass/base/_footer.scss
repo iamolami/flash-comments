@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  height: 100%;
+  //height: 100%;
   background-color: $color-black;
   padding: 5rem 10rem;
 
@@ -19,13 +19,13 @@
       lxl-resolution xxl-resolution crtxl-resolution mbpxl-resolution
   ) {
     padding: 3rem 2rem;
-    height: 100%;
   }
 
   &__container {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    overflow-y: hidden;
 
     @include for_breakpoint(
       sm-resolution md-resolution smxl-resolution mdxl-resolution lxl-resolution
@@ -37,7 +37,6 @@
 
   &__box {
     flex: 1;
-    height: 35vh;
   }
 
   &__icons {
@@ -157,7 +156,6 @@
     height: 1px;
     background-color: $text-color;
     display: block;
-    margin: 2rem 0;
 
     @include for_breakpoint(
       crtxl-resolution mbpxl-resolution gtfxl-resolution txl-resolution
@@ -282,4 +280,29 @@
       color: $text-color;
     }
   }
+}
+
+#google_translate_element {
+  select {
+    background-color: transparent;
+    color: $color-white;
+    padding: 0.5rem 1rem;
+    outline: none;
+    font-size: 0.9rem;
+    border: 1px solid $text-color;
+    border-radius: 7px;
+  }
+
+  option {
+    color: $text-color;
+    font-family: inherit;
+    font-size: 0.9rem;
+    background-color: $color-black;
+  }
+}
+
+p {
+  color: $color-white;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
