@@ -13,7 +13,7 @@ request.onload = function () {
 
 function showArticles(jsonObj) {
     const data = jsonObj['members'];
-    const urls = window.location.href.match(/\d+/g)[1];
+    const urls = window.location.href.match(/\d+/g)[0];
 
     function findId(data, idToLookFor) {
         for (let i = 0; i < data.length; i++) {
