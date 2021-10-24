@@ -1,5 +1,6 @@
 {
   "name": "spark-comment",
+  "homepage": "https://timakano.com/",
   "version": "1.0.0",
   "description": "A application for comments",
   "main": "server.js",

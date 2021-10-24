@@ -1,6 +1,7 @@
 .header {
+  position: fixed;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   //background-image: url("../assets/_DSC3307.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../assets/_DSC3307.jpg");
@@ -14,7 +15,7 @@
       lxl-resolution xxl-resolution eexl-resolution crtxl-resolution
       mbpxl-resolution
   ) {
-    min-height: 100vh;
+    min-height: 100%;
   }
 
   &__container {
@@ -326,7 +327,7 @@
     sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
       lxl-resolution xxl-resolution eexl-resolution eexl-resolution
   ) {
-    margin-top: 0rem;
+    margin-top: 0.5rem;
     font-size: 2.2rem;
     display: block;
   }
