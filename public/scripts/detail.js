@@ -13,7 +13,7 @@ request.onload = function () {
 
 function showArticles(jsonObj) {
     const data = jsonObj['members'];
-    const urls = window.location.href.match(/\d+/g)[0];
+    const urls = window.location.href.match(/\d+/g)[1];
 
     function findId(data, idToLookFor) {
         for (let i = 0; i < data.length; i++) {
@@ -29,55 +29,59 @@ function showArticles(jsonObj) {
                         <p class="details__date">${data[i].date}</p>
                         <p class="details__content">${data[i].preview}</p>
                         <p class="details__author">Written by: ${data[i].author}</p>
-                        <button class="details__btn"><a href="#">Download PDF</a></button>
+                        <a href="${data[i].hyperlink}" download="${data[i].name} target="_blank" rel="noopener noreferrer">
+                            <button class="details__btn">Download PDF</button>
+                        </a>
                     </div>
                 </div>
                 <div class ="sh-use">
                     <h2 class="sh-use__heading">Recommended by Tim</h2>
                     <div class="sh-use__wrapper">
-                        <div class="sh-use__box">
-                            <div class ="sh-use__img">
-                                <img src = "${data[0].avatar}" alt="1">
+                        <a href="${data[0].hyperlink} download="${data[0].name}" target="_blank" rel="noopener noreferrer">
+                            <div class="sh-use__box">
+                                <div class ="sh-use__img">
+                                    <img src = "${data[0].avatar}" alt="1">
+                                </div>
+                                <div class="sh-use__text">
+                                    <h3 class = "sh-use__title">${data[0].name}</h3>
+                                    <p class="sh-use__sub">${data[0].content}</p>    
+                                </div> 
                             </div>
-                            <div class="sh-use__text">
-                                <h3 class = "sh-use__title">${data[0].name}</h3>
-                                <p class="sh-use__sub">${data[0].content}</p>
-                                
-                            </div> 
-                        </div>
+                        </a>
+                        <a href="${data[4].hyperlink} download="${data[4].name}" target="_blank" rel="noopener noreferrer">
+                            <div class="sh-use__box">
+                                <div class ="sh-use__img">
+                                    <img src = "${data[4].avatar}" alt="1">
+                                </div>
+                                <div class="sh-use__text">
+                                    <h3 class = "sh-use__title">${data[4].name}</h3>
+                                    <p class="sh-use__sub">${data[4].content}</p>    
+                                </div> 
+                            </div>
+                        </a>
 
-                        <div class="sh-use__box">
-                            <div class ="sh-use__img">
-                                <img src = "${data[4].avatar}" alt="1">
+                        <a href="${data[6].hyperlink} download="${data[6].name}" target="_blank" rel="noopener noreferrer">
+                            <div class="sh-use__box">
+                                <div class ="sh-use__img">
+                                    <img src = "${data[6].avatar}" alt="1">
+                                </div>
+                                <div class="sh-use__text">
+                                    <h3 class = "sh-use__title">${data[0].name}</h3>
+                                    <p class="sh-use__sub">${data[6].content}</p>    
+                                </div> 
                             </div>
-                            <div class="sh-use__text">
-                                <h3 class = "sh-use__title">${data[4].name}</h3>
-                                <p class="sh-use__sub">${data[4].content}</p>
-                                
-                            </div> 
-                        </div>
-
-                        <div class="sh-use__box">
-                            <div class ="sh-use__img">
-                                <img src = "${data[6].avatar}" alt="1">
+                        </a>
+                        <a href="${data[8].hyperlink} download="${data[8].name}" target="_blank" rel="noopener noreferrer">
+                            <div class="sh-use__box">
+                                <div class ="sh-use__img">
+                                    <img src = "${data[8].avatar}" alt="1">
+                                </div>
+                                <div class="sh-use__text">
+                                    <h3 class = "sh-use__title">${data[8].name}</h3>
+                                    <p class="sh-use__sub">${data[8].content}</p>    
+                                </div> 
                             </div>
-                            <div class="sh-use__text">
-                                <h3 class = "sh-use__title">${data[6].name}</h3>
-                                <p class="sh-use__sub">${data[6].content}</p>
-                                
-                            </div> 
-                        </div>
-
-                        <div class="sh-use__box">
-                            <div class ="sh-use__img">
-                                <img src = "${data[8].avatar}" alt="1">
-                            </div>
-                            <div class="sh-use__text">
-                                <h3 class = "sh-use__title">${data[8].name}</h3>
-                                <p class="sh-use__sub">${data[8].content}</p>
-                                
-                            </div> 
-                        </div>
+                        </a>
                     </div>
                 </div>
         `;

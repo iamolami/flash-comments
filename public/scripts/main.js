@@ -45,7 +45,7 @@ const closeMenu = (toggleClose, navClose) => {
 closeMenu('menu__close', 'nav__menu')
 
 /*==================== SCROLL REVEAL ANIMATION ====================*/
-window.sr = ScrollReveal({
+const sr = ScrollReveal({
     origin: 'top',
     distance: '30px',
     duration: 2000,
