@@ -13,7 +13,7 @@ request.onload = function () {
 
 function showArticles(jsonObj) {
     const data = jsonObj['members'];
-    const urls = window.location.href.match(/\d+/g)[0];
+    const urls = window.location.href.match(/\d+/g);
 
     function findId(data, idToLookFor) {
         for (let i = 0; i < data.length; i++) {
@@ -93,4 +93,4 @@ function showArticles(jsonObj) {
     findId(data, urls)
 }
 
-console.log('https://tim-akano.herokuapp.com/detail?1'.match(/\d+/g))
+console.log('http://timakano.com/detail?2'.match(/\d+/g))
