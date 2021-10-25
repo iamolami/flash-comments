@@ -13,7 +13,7 @@ request.onload = function () {
 
 function showArticles(jsonObj) {
     const data = jsonObj['members'];
-    const urls = window.location.href.match(/\d+/g);
+    const urls = window.location.href.match(/\d+/g)[1];
 
     function findId(data, idToLookFor) {
         for (let i = 0; i < data.length; i++) {
@@ -66,7 +66,7 @@ function showArticles(jsonObj) {
                                     <img src = "${data[6].avatar}" alt="1">
                                 </div>
                                 <div class="sh-use__text">
-                                    <h3 class = "sh-use__title">${data[0].name}</h3>
+                                    <h3 class = "sh-use__title">${data[6].name}</h3>
                                     <p class="sh-use__sub">${data[6].content}</p>    
                                 </div> 
                             </div>

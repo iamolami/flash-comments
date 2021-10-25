@@ -297,15 +297,16 @@
   }
 
   &__main {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    letter-spacing: .1rem;
     color: $heading-color;
     font-weight: 700;
-    margin: 0.8rem 0;
+    margin: 0.9rem 0;
     text-transform: uppercase;
   }
 
   &__content {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: #333;
     line-height: 1.4rem;
   }
@@ -421,9 +422,10 @@
 
   &__main {
     font-size: 1.2rem;
+    letter-spacing: .1rem;
     color: $heading-color;
     font-weight: 700;
-    margin: 1rem 0;
+    margin: 2rem 0;
     text-transform: uppercase;
 
     @include for_breakpoint(desktop1 desktop2 min-gtfxl-resolution) {
@@ -576,7 +578,8 @@
 
   &__title {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
+    text-transform: uppercase;
     color: $heading-color;
     margin: 0.8rem 0;
   }
