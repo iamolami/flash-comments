@@ -207,11 +207,12 @@
 
     @include for_breakpoint(desktop3 desktop4 desktop5) {
       font-size: 50px;
+      line-height: 4rem;
     }
 
     @include for_breakpoint(
       eexl-resolution crtxl-resolution mbpxl-resolution gtfxl-resolution
-        txl-resolution exl-resolution tablet desktop1 desktop2
+        txl-resolution exl-resolution tablet
         min-gtfxl-resolution
     ) {
       line-height: 4rem;

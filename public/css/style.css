@@ -1605,9 +1605,10 @@ ul, li {
 @media (max-width: 1366px), (max-width: 1439px), (max-width: 1599px) {
   .header__main {
     font-size: 50px;
+    line-height: 4rem;
   }
 }
-@media (max-width: 800px), (max-width: 900px), (max-width: 959px), (max-width: 979px), (max-width: 985px), (max-width: 991px), (max-width: 1024px), (max-width: 1169px), (max-width: 1199px), (min-width: 1025px) {
+@media (max-width: 800px), (max-width: 900px), (max-width: 959px), (max-width: 979px), (max-width: 985px), (max-width: 991px), (max-width: 1024px), (min-width: 1025px) {
   .header__main {
     line-height: 4rem;
   }
