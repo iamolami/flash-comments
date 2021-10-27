@@ -215,7 +215,7 @@
         txl-resolution exl-resolution tablet desktop1 desktop2
         min-gtfxl-resolution
     ) {
-      line-height: 3.5rem;
+      line-height: 4rem;
     }
 
     @include for_breakpoint(
@@ -223,7 +223,7 @@
         lxl-resolution xxl-resolution eexl-resolution
     ) {
       font-size: 2rem;
-      line-height: 2.5rem;
+      line-height: 3rem;
     }
   }
 
