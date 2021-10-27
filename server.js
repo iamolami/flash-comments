@@ -17,9 +17,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 
 const PORT = process.env.PORT || 9000;
-const HOST = '0.0.0.0';
 
-const server = app.listen(PORT, HOST, () => {
+const server = app.listen(PORT, () => {
   console.log('Example app listening on port 9000')
 });
 

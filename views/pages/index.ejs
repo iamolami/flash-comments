@@ -17,8 +17,9 @@
             j.src =
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-WCR7NZT');
+        })(window, document, 'script', 'dataLayer', 'GTM-PG8337B');
     </script>
+    <!-- End Google Tag Manager -->
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
@@ -38,50 +39,26 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <title>Timo Akano - Personal Website</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YZ8F250SJE"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-YZ8F250SJE');
-    </script>
 </head>
 
-<body>
+<body onload="myFunction()">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCR7NZT" height="0" width="0"
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PG8337B" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!-- ===================== Preload ================= -->
-    <div class="overlayer"></div>
-    </div>
-    <div class="container">
-        <div class="container__text">
-            <span class="container__primary">Tim</span>
-            Akano
-        </div>
-        <div class="container__flip">
-            <div>
-                <div>Author</div>
+    <div class="wrapper" id="loader">
+        <div class="textBox">
+            <div class="container__left">
+                <p class="bigText">Tim Akano</p>
             </div>
-            <div>
-                <div>Enterpreneur</div>
-            </div>
-            <div>
-                <div>Mentor / Coach</div>
-            </div>
-            <div>
-                <div>Investor</div>
+            <div class="container__right">
+                <p class="animateText">Investor</p>
             </div>
         </div>
     </div>
 
-    <section class="section__header">
+    <section class="content" id="myDiv">
         <div class="header">
             <div class="header__container">
                 <%- include ('../partials/header') %>
@@ -94,19 +71,21 @@
             <!-- <div class="header__box"><img src="./assets/home.png" alt=""></div> -->
             <div class="header__text">
                 <h2 class="header__main animated animate__shakeX">
-                    I am the
-                    <span class="container__primary">VEHICLE</span>
-                    and the <span class="container__primary">VISION</span>
-                    is to <span class="container__primary">CONNECT</span> all Africans
+                    I am the vehicle
+                    and the vision is to
+                    connect all Africans
                 </h2>
             </div>
             <div class="chatBox">
-                <button class="chatBox__btn">Chat Tim <i class='bx bx-chat'></i></button>
+                <a href="https://wa.link/884iu3" target="_blank">
+                    <button class="chatBox__btn">
+                        <span class="chatBox__span">Chat Tim <i class='bx bx-chat'></i></span>
+                    </button>
+                </a>
             </div>
         </div>
     </section>
     <!-- =========== JQuery Link ============== -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="./scripts/preload.js"></script>
     <script src="./scripts/main.js"></script>
 </body>

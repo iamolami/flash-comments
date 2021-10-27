@@ -52,7 +52,7 @@ const sr = ScrollReveal({
     reset: true
 });
 
-sr.reveal(`.'comment__list, .main__card, .details__box, .sh-use__box,
+sr.ScrollReveal(`.'comment__list, .main__card, .details__box, .sh-use__box,
             .about__container__text, .about__container__box, `, {
     interval: 200
 })
