@@ -1,17 +1,12 @@
 // ============== Import classes from about.html =====================
 .about__container {
   width: 100%;
-  // height: 80vh;
   background-color: $bg-color;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   flex-direction: row;
   overflow-x: hidden;
-
-  // @include for_breakpoint(eexl-resolution) {
-  //   flex-direction: row;
-  // }
 
   @include for_breakpoint(
     sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
@@ -105,11 +100,6 @@
   &__text {
     padding-left: $mb-5;
 
-    // @include for_breakpoint(xxl-resolution) {
-    //   background-color: rgb(28, 18, 18);
-    //   width: 100%;
-    // }
-
     @include for_breakpoint(desktop1 desktop2 min-gtfxl-resolution) {
       padding: 0 4rem;
     }
@@ -154,7 +144,7 @@
         lxl-resolution xxl-resolution eexl-resolution crtxl-resolution
         mbpxl-resolution gtfxl-resolution txl-resolution exl-resolution tablet
     ) {
-      margin-top: 2rem;
+      margin-top: 5rem;
       font-size: 0.8rem;
     }
 
@@ -242,14 +232,6 @@
   }
 }
 
-.about__fixed {
-  padding-top: 3rem;
-  //height: 100vh;
-  margin-bottom: 2.5rem;
-}
-.about__elementary {
-  background-color: $color-white;
-}
 .about__margin {
   padding-right: $mb-5;
 
@@ -261,35 +243,21 @@
     margin-top: -10rem;
   }
 }
-.about__01 {
-  //margin-top: 10rem;
-  padding-right: $mb-5;
 
-  @include for_breakpoint(
-    sm-resolution md-resolution smxl-resolution mdxl-resolution lxl-resolution
-      xxl-resolution eexl-resolution
-  ) {
-    margin-top: -5rem;
-    padding-right: 2rem;
+  .about__info {
+    margin-top: 2rem;
   }
-}
-.about__info {
-  margin-top: 2rem;
-}
-.about__vertical {
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  .about__vertical {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
 
-  @include for_breakpoint(
-    sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
-      xxl-resolution lxl-resolution eexl-resolution
-  ) {
-    border-left: none;
+    @include for_breakpoint(
+      sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
+        xxl-resolution lxl-resolution eexl-resolution
+    ) {
+      border-left: none;
+    }
   }
-}
-.about__sticky {
-  position: fixed;
-  z-index: 1000;
-}
+
 
 .about__secondary {
   width: 100%;
@@ -343,6 +311,7 @@
 .elementary {
   background-color: $bg-color;
   padding-top: 1.8rem;
+  height: 100%;
 
   @include for_breakpoint(
     sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
@@ -354,10 +323,9 @@
   &__head {
     text-align: center;
     font-size: 1.8rem;
-    font-family: $heading-family;
     color: $heading-color;
     margin-bottom: 1.8rem;
-    font-style: italic;
+  
 
     @include for_breakpoint(
       sm-resolution md-resolution xl-resolution smxl-resolution mdxl-resolution
@@ -406,10 +374,11 @@
 
   &__box {
     margin-top: 1rem;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
 
   &__main {
@@ -427,31 +396,14 @@
       sm-resolution md-resolution mdxl-resolution lxl-resolution xxl-resolution
         eexl-resolution
     ) {
-      font-size: 0.9rem;
-    }
-  }
-
-  &__post {
-    font-size: 1rem;
-    font-weight: $font-light;
-    color: $heading-color;
-
-    @include for_breakpoint(eexl-resolution) {
       font-size: 1rem;
-    }
-
-    @include for_breakpoint(
-      sm-resolution md-resolution mdxl-resolution lxl-resolution xxl-resolution
-        eexl-resolution
-    ) {
-      font-size: 0.8rem;
     }
   }
 }
 
 .swiper {
   width: 100%;
-  //height: 40vh;
+  height: 100%;
   margin-bottom: 2rem;
   padding-left: 5rem;
   padding-right: 5rem;
@@ -472,7 +424,7 @@
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
+  height: 100%;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;

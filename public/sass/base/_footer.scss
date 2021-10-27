@@ -281,28 +281,3 @@
     }
   }
 }
-
-#google_translate_element {
-  select {
-    background-color: transparent;
-    color: $color-white;
-    padding: 0.5rem 1rem;
-    outline: none;
-    font-size: 0.9rem;
-    border: 1px solid $text-color;
-    border-radius: 7px;
-  }
-
-  option {
-    color: $text-color;
-    font-family: inherit;
-    font-size: 0.9rem;
-    background-color: $color-black;
-  }
-}
-
-p {
-  color: $color-white;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
