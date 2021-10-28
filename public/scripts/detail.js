@@ -13,7 +13,7 @@ request.onload = function () {
 
 function showArticles(jsonObj) {
     const data = jsonObj['members'];
-    const urls = window.location.href.match(/\d+/g)[1];
+    const urls = window.location.href.match(/\d+/g);
 
     function findId(data, idToLookFor) {
         for (let i = 0; i < data.length; i++) {
@@ -30,7 +30,7 @@ function showArticles(jsonObj) {
                         <p class="details__content">${data[i].preview}</p>
                         <p class="details__author">Written by: ${data[i].author}</p>
                         <a href="${data[i].hyperlink}" download="${data[i].name} target="_blank" rel="noopener noreferrer">
-                            <button class="details__btn">Download PDF</button>
+                            <button class="details__btn"><i class='bx bx-download'></i> Download PDF</button>
                         </a>
                     </div>
                 </div>
