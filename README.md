@@ -5,8 +5,9 @@ Tim Akano - Investor, Entrepreneur, and Coach
 
 ## Prerequisite Softwares
 - NodeJS
+- Ejs
+- JavaScript
 - NPM
-- Yarn (Optional)
 
 For Any suggestion or questions Tweet to me at 
 [musediqolamilekan567@gmail.com]
